@@ -6,6 +6,8 @@ import { CardDto } from './card.dto';
 export class CardController {
     @Post()
     create(@Body() cardDto: CardDto, @Res() res: Response) {
-        res.status(HttpStatus.CREATED).json([]);
+        res.status(HttpStatus.CREATED).json({
+            statusCode: HttpStatus.CREATED
+        });
     }
 }
